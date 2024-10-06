@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+$oswald: "Oswald", system-ui;
+$poppins: "Poppins", system-ui;
+$font: $oswald or $poppins;
+
+@mixin setFont($font, $font-size, $font-weight){
+    font-family:$font;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}

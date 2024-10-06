@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CloudCrafters</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <header>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <div class="city">
+                            <img src="Images/marker-ico.svg" alt="">
+                            <span>Varanasi</span>, <em>IN</em>
+                        </div>
+                        <div class="search flex-grow-1">
+                            <img src="Images/search-ico.svg" alt="">
+                            <input type="search" class="form-control" name="search-city" id="search-city" placeholder="Search City...">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="row g-4"> <!--gutter-->
+                    <div class="col-lg-4">
+                        <div class="current-weather">
+                            <img class="main-image" src="Images/main-weather-bg.png" alt="" >
+                            <div class="search-date text-center">
+                                <p><span class="day me-2">Sunday</span><em class="me-2">22 Sep,2024</em><span class="time">03:30PM</span></p>
+                            </div>
+                            <div class="d-flex justify-content-center py-4">
+                                <div class="weather-icon text-center p-0">
+                                    <img src="weather-icon/thunderstorm-rain.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center " style="padding: 12px;">
+                                <div class="weather-temp d-flex align-items-start">
+                                    <p>24</p>
+                                    <div>
+                                        <em>°</em>
+                                        <span>C</span>
+                                    </div>
+                                </div>
+                                <div class="air-quality">
+                                    <label for="">Air Quality</label>
+                                    <p class="mb-0 d-flex align-items-center pb-3"><span class="air-color me-2" style="background: #f2eb0e"></span>40</p>
+                                </div>
+                            </div>
+                            <div class="weather-type pt-4">
+                                <img src="weather-icon/thunderstorm-rain.svg" height="35" alt="">Thunderstorm with Heavy Rain
+                            </div>
+                            <div class="air-quality-vals">
+                                <p>Air Quality Index Values</p>
+                                <div class="row">
+                                    <div class="col-sm-6 indexes mb-0 d-flex justify-content-between">
+                                        <div>    
+                                            <span class="color"></span>
+                                            <span class="value-type">Good</span>
+                                        </div>
+                                        <span class="index-value">0-20</span> 
+                                    </div>
+                                    <div class="col-sm-6 indexes mb-0 d-flex justify-content-between">
+                                        <div>
+                                            <span class="color"></span>
+                                            <span class="value-type">Fair</span>
+                                        </div>
+                                        <span class="index-value">20-80</span> 
+                                    </div>
+                                    <div class="col-sm-6 mb-0 indexes d-flex justify-content-between">
+                                        <div>
+                                            <span class="color"></span>
+                                            <span class="value-type">Moderate</span>
+                                        </div>
+                                        <span class="index-value">80-250</span> 
+                                    </div>
+                                    <div class="col-sm-6 mb-0 indexes d-flex justify-content-between">
+                                        <div>
+                                            <span class="color"></span>
+                                            <span class="value-type">Poor</span>
+                                        </div>
+                                        <span class="index-value">250-350</span> 
+                                    </div>
+                                    <div class="col-sm-6 mb-0 indexes d-flex justify-content-between">
+                                        <div>
+                                            <span class="color"></span>
+                                            <span class="value-type">Very Poor</span>
+                                        </div>
+                                        <span class="index-value">350-500</span> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="main-content highlight">
+                            <img src="Images/highlight-bg.png" alt="" class="main-image">
+                            <h6>Today's Highlight</h6>
+                            <div class="highlight-box">
+                                <div class="row g-3">
+                                    <div class="col-xl-4">
+                                        <div class="highlight-content flex">
+                                            <h5>Wind Status</h5>
+                                            <div style="margin-top: 100px" >
+                                                <img class="img-fluid wind-icon" src="Images/wind-icon.png" alt="">
+                                                <div class="text-center">
+                                                    <div class="wind-type">
+                                                        WSW - 234
+                                                    </div>
+                                                    <div class="common-value">
+                                                        <p>7.90<em> km/h</em></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4">
+                                        <div class="highlight-content">
+                                            <h5>UV Index</h5>
+                                            <div class="uv-index d-flex justify-content-center flex-column align-items-center">
+                                                <div class="circle-box">
+                                                    <div class="circle-out">
+                                                        <div class="text">
+                                                            <span>0</span>
+                                                            <span>2</span>
+                                                            <span>4</span>
+                                                            <span>6</span>
+                                                            <span>8</span>
+                                                            <span>10</span>
+                                                            <span>12</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="circle-in">
+                                                        <div id="bar" class="circle" style="transform: rotate(-120deg);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uv-value common-value d-flex justify-content-center text-center ">
+                                                    <p class="mb-0">3.9 <em>UV</em></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4">
+                                        <div class="highlight-content">
+                                            <h5>Sunrise & Sunset</h5>
+                                            <div class="uv-index sunrise-set d-flex justify-content-center flex-column align-items-center">
+                                                <div class="circle-box">
+                                                    <div class="circle-out"></div>
+                                                    <div class="circle-in">
+                                                        <div id="bar" class="circle" style="transform: rotate(-120deg);"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="sun-details">
+                                                    <div class="sun-box d-flex justify-content-between">
+                                                        <div class="sun-time text-start">
+                                                            <img src="Images/sunrise.svg" alt="">
+                                                            <span>Sunrise</span>
+                                                            <p class="mb-0">05:50 AM</p>
+                                                        </div>
+                                                        <div class="sun-time text-end">
+                                                            <img src="Images/sunset.svg" alt="">
+                                                            <span>Sunset</span>
+                                                            <p class="mb-0">06:50 PM</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4">
+                                        <div class="highlight-content short p-4 pb-3">
+                                            <h5>Humidity</h5>
+                                            <div class="highlight-value d-flex justify-content-between">
+                                                <p>25<em>%</em></p>
+                                                <img src="Images/humidity-ico.svg" alt="" class="pb-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4">
+                                        <div class="highlight-content short p-4 pb-3">
+                                            <h5>Visibility</h5>
+                                            <div class="highlight-value d-flex justify-content-between">
+                                                <p>5.2<em>km</em></p>
+                                                <img src="Images/visibility-ico.svg" alt="" class="pb-2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4">
+                                        <div class="highlight-content short p-4 pb-3">
+                                            <h5>Feels Like</h5>
+                                            <div class="highlight-value d-flex justify-content-between">
+                                                <div class="d-flex align-items-start">
+                                                    <p>31.47</p>
+                                                    <em> °</em>
+                                                    <span>C</span>
+                                                </div>
+                                                <img src="Images/feels-ico.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-8">
+                        <h3>5 Days Forecast</h3>
+                        <div class="main-content forcast">
+                            <img src="Images/forcast-bg.png" alt="" class="main-image">
+                            <div class="row g-2">
+                                <div class="col-xl col-sm-4 col-6"> 
+                                    <div class="forcast-box">
+                                        <div class="weather-icon d-flex justify-content-center">
+                                            <div class="weather-img">
+                                                <img src="weather-icon/thunderstorm-rain.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="date-time">
+                                            <p>5 October</p>
+                                            <span>Saturday</span>
+                                        </div>
+                                        <div class="temp d-flex justify-content-center align-items-end">
+                                            <div class="max-temp">
+                                                <p class="mb-0">27.19°</p>
+                                            </div>
+                                            <div class="min-temp">
+                                                <p class="mb-0">/ 26.63°</p>
+                                            </div>
+                                        </div>
+                                        <div class="highlights">
+                                            <div class="row g-0">
+                                                <div class="col-7 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/humidity-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">25 <em>%</em></p>
+                                                </div>
+                                                <div class="col-5 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/feels-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">30°</p>
+                                                </div>
+                                                <div class="col-7 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/wind-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">25 <em>km/h</em></p>
+                                                </div>
+                                                <div class="col-5 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/visibility-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">5 <em>km</em></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl col-sm-4 col-6" > 
+                                    <div class="forcast-box">
+                                        <div class="weather-icon d-flex justify-content-center ">
+                                            <div class="weather-img">
+                                                <img src="weather-icon/thunderstorm-rain.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="date-time">
+                                            <p>5 October</p>
+                                            <span>Saturday</span>
+                                        </div>
+                                        <div class="temp d-flex justify-content-center align-items-end">
+                                            <div class="max-temp">
+                                                <p class="mb-0">27.19°</p>
+                                            </div>
+                                            <div class="min-temp">
+                                                <p class="mb-0">/ 26.63°</p>
+                                            </div>
+                                        </div>
+                                        <div class="highlights">
+                                            <div class="row g-0">
+                                                <div class="col-7 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/humidity-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">25 <em>%</em></p>
+                                                </div>
+                                                <div class="col-5 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/feels-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">30°</p>
+                                                </div>
+                                                <div class="col-7 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/wind-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">25 <em>km/h</em></p>
+                                                </div>
+                                                <div class="col-5 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/visibility-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">5 <em>km</em></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl col-sm-4 col-6" >
+                                    <div class="forcast-box">
+                                        <div class="weather-icon d-flex justify-content-center">
+                                            <div class="weather-img">
+                                                <img src="weather-icon/thunderstorm-rain.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="date-time">
+                                            <p>5 October</p>
+                                            <span>Saturday</span>
+                                        </div>
+                                        <div class="temp d-flex justify-content-center align-items-end">
+                                            <div class="max-temp">
+                                                <p class="mb-0">27.19°</p>
+                                            </div>
+                                            <div class="min-temp">
+                                                <p class="mb-0">/ 26.63°</p>
+                                            </div>
+                                        </div>
+                                        <div class="highlights">
+                                            <div class="row g-0">
+                                                <div class="col-7 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/humidity-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">25 <em>%</em></p>
+                                                </div>
+                                                <div class="col-5 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/feels-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">30°</p>
+                                                </div>
+                                                <div class="col-7 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/wind-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">25 <em>km/h</em></p>
+                                                </div>
+                                                <div class="col-5 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/visibility-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">5 <em>km</em></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl col-sm-4 col-6" >
+                                    <div class="forcast-box">
+                                        <div class="weather-icon d-flex justify-content-center">
+                                            <div class="weather-img">
+                                                <img src="weather-icon/thunderstorm-rain.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="date-time">
+                                            <p>5 October</p>
+                                            <span>Saturday</span>
+                                        </div>
+                                        <div class="temp d-flex justify-content-center align-items-end">
+                                            <div class="max-temp">
+                                                <p class="mb-0">27.19°</p>
+                                            </div>
+                                            <div class="min-temp">
+                                                <p class="mb-0">/ 26.63°</p>
+                                            </div>
+                                        </div>
+                                        <div class="highlights">
+                                            <div class="row g-0">
+                                                <div class="col-7 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/humidity-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">25 <em>%</em></p>
+                                                </div>
+                                                <div class="col-5 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/feels-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">30°</p>
+                                                </div>
+                                                <div class="col-7 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/wind-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">25 <em>km/h</em></p>
+                                                </div>
+                                                <div class="col-5 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/visibility-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">5 <em>km</em></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl col-sm-4 col-6" >
+                                    <div class="forcast-box">
+                                        <div class="weather-icon d-flex justify-content-center">
+                                            <div class="weather-img">
+                                                <img src="weather-icon/thunderstorm-rain.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="date-time">
+                                            <p>5 October</p>
+                                            <span>Saturday</span>
+                                        </div>
+                                        <div class="temp d-flex justify-content-center align-items-end">
+                                            <div class="max-temp">
+                                                <p class="mb-0">27.19°</p>
+                                            </div>
+                                            <div class="min-temp">
+                                                <p class="mb-0">/ 26.63°</p>
+                                            </div>
+                                        </div>
+                                        <div class="highlights">
+                                            <div class="row g-0">
+                                                <div class="col-7 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/humidity-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">25 <em>%</em></p>
+                                                </div>
+                                                <div class="col-5 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/feels-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">30°</p>
+                                                </div>
+                                                <div class="col-7 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/wind-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">25 <em>km/h</em></p>
+                                                </div>
+                                                <div class="col-5 highlights-text d-flex align-items-center">
+                                                    <div>
+                                                        <img src="Forecast/visibility-ico.svg" alt="">
+                                                    </div>
+                                                    <p class="mb-0">5 <em>km</em></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3>Other Large Cities</h3>
+                        <div class="main-content other-cities">
+                            <img src="Images/other-cities-bg.png" alt="" class="main-image">
+                            <div class="city-box">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1">
+                                        <p class="city">California <span>US</span></p>
+                                        <p class="weather-description">Thunderstorm with Heavy Rain</p>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="temp">27°</p>
+                                    </div>
+                                    <div>
+                                        <div class="weather-ico">
+                                            <img src="weather-icon/snow.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content other-cities">
+                            <img src="Images/other-cities-bg.png" alt="" class="main-image">
+                            <div class="city-box">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1">
+                                        <p class="city">California <span>US</span></p>
+                                        <p class="weather-description">Thunderstorm with Heavy Rain</p>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="temp">27°</p>
+                                    </div>
+                                    <div>
+                                        <div class="weather-ico">
+                                            <img src="weather-icon/snow.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content other-cities">
+                            <img src="Images/other-cities-bg.png" alt="" class="main-image">
+                            <div class="city-box">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1">
+                                        <p class="city">California <span>US</span></p>
+                                        <p class="weather-description">Thunderstorm with Heavy Rain</p>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="temp">27°</p>
+                                    </div>
+                                    <div>
+                                        <div class="weather-ico">
+                                            <img src="weather-icon/snow.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!-- 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>  

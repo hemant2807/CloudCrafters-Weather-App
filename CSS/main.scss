@@ -1,0 +1,543 @@
+@import 'color';
+@import 'fonts';
+body{
+    background: $main-bg;
+}
+header{
+    padding: 20px 0;
+    .city{
+        color: white;
+        span{
+            display: inline-block;
+            margin-left: 10px;
+        }
+        em{
+            font-style: normal;
+            opacity: .5;
+        }
+    }
+    .search{
+        margin-left: 50px;
+        position: relative;
+        img{
+            position: absolute;
+            top: 14px;
+            left: 23px;
+            z-index: 1;
+        }
+        .form-control{
+            background: #2b313c;
+            position: relative;
+            z-index: 0;
+            color: white;
+            border-radius: 50px;
+            height: 56px;
+            border: none;
+            box-shadow: none;
+            outline: none;
+            padding-left: 67px;
+        }
+
+    }
+}
+.main-wrapper{
+    .main-image{
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    *:not(.main-image){
+        position: relative;
+        z-index: 2;
+    }
+}
+.current-weather{
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 20px 30px;
+    color: #fff;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        backdrop-filter: blur(50px);
+        --webkit-backdrop-filter: blue(50px);
+        background-color: rgba(255,255,255,0.07);
+        z-index: 1;
+    }
+    .search-date{
+        p{
+            span,em{
+                display: inline-block;
+                @include setFont($poppins,13px,300);
+                font-style: normal;
+            }
+            span{
+                &.time{
+                    font-weight:600;
+                }
+            }
+        }
+    }
+    .weather-icon{
+        height:175px;
+        width: auto;
+        padding: 10px 0;
+        img{
+            height: 100%;
+        }
+    }
+    .weather-temp{
+        @include setFont($oswald,70px,300);
+        position: relative;
+        padding-right: 36px;
+        p{
+            line-height: 68px;
+        }
+        div{
+            display: flex;
+            em{
+                font-style: normal;
+                @include setFont($poppins,21px,300); 
+            }
+            span{
+                @include setFont($oswald,32px,300);
+                margin-left: 3px;;
+                line-height: 42px;
+            }
+        }
+    }
+    .air-quality{
+        label{
+            @include setFont($poppins, 16px,300); 
+        }
+        p{
+            @include setFont($oswald,30px,300);
+            line-height: 31px;
+            margin-top: 10px;
+            span{
+                width: 8px;
+                height: 8px;
+                border-radius: 10px;
+                display: inline-block;
+            }
+        }
+    }
+    .air-quality-vals{
+        text-align: center;
+        margin-top: 20px;
+        border-top: solid 1px rgb(255, 255, 255,.3);
+        padding-top: 25px;
+        @include setFont($poppins, 12px,300);
+    }
+    .indexes{
+        text-align: left;
+        margin-bottom: 7px;
+        span.color{
+            width: 8px;
+            height: 8px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-right: 5px;
+        }  
+        .value-type{
+            opacity: .7;
+        }  
+        .index-value{
+            font-weight: 500;
+        }
+        &:nth-child(1){
+            .color{
+                background: #6bdf4e;
+            }
+        }
+        &:nth-child(2){
+            .color{
+                background: #f2eb0e;
+            }
+        }
+        &:nth-child(3){
+            .color{
+                background: #ffa023;
+            }
+        }
+        &:nth-child(4){
+            .color{
+                background: #cd5f00;
+            }
+        }
+        &:nth-child(5){
+            .color{
+                background: #c60000;
+            }
+        }
+    }
+
+}
+h6{
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+h3{
+    margin-bottom: 20px;
+    color: white;
+}
+.main-content{
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 20px 30px;
+    color: white;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        backdrop-filter: blur(50px);
+        --webkit-backdrop-filter: blur(50px);
+        background-color: rgba(255, 255, 255, .07);
+        z-index: 1;
+    }
+    &.highlight{
+        .highlight-box{
+            .highlight-content{
+                min-height: 376px;
+                background: transparent;
+                backdrop-filter: blur(50px);
+                --webkit-backdrop-filter: blur(50px);
+                background-color: rgba(0, 0, 0, .3);
+                border-radius: 14px;
+                h5{
+                    @include setFont($poppins,18px,300);
+                    padding: 25px 0 0 25px;
+                }
+                .wind-type{
+                    opacity: .5;
+                    margin-top: 15px;
+                }
+                .common-value{
+                    @include setFont($oswald, 70px ,300);
+                    position: relative;
+                    padding-right: 36px;
+                    p{
+                        line-height: 55px;
+                        margin-top: 15px;
+                        padding-left: 56px;
+                        em{
+                            opacity: .5;
+                            font-style: normal;
+                            @include setFont($poppins, 21px,300);
+                        }
+                    }
+                }
+                .uv-index{
+                    h5{
+                        width: 100%;
+                    }
+                    .circle-box{
+                        width: 240px;
+                        height: 120px;
+                        // border: solid 1px red;
+                        overflow: hidden;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 76px;
+                        .circle-out{
+                            width: 224px;
+                            height: 111px;
+                            border-top-left-radius: 380px;
+                            border-top-right-radius: 380px;
+                            border: 7px solid rgba(255, 255, 255, .28);
+                            border-bottom: 0;
+                            position: absolute;
+                            bottom: 0;
+                            .text{
+                                @include setFont($poppins,12px,300);
+                                opacity: .3;
+                                position: absolute;
+                                left: 0;
+                                bottom: -5;
+                                z-index: 1;
+                                padding: 10px 14px 0;
+                                width: 100%;
+                                height: 100%;
+                                span{
+                                    position: absolute;
+                                    &:nth-child(1){
+                                        bottom: 0;
+                                        left: 13px;
+                                    }
+                                    &:nth-child(2){
+                                        bottom: 41px;
+                                        left: 25px;
+                                    }
+                                    &:nth-child(3){
+                                        top: 15px;
+                                        left: 56px;
+                                    }
+                                    &:nth-child(4){
+                                        top: 3px;
+                                        left: 102px;
+                                    }
+                                    &:nth-child(5){
+                                        top: 15px;
+                                        right: 56px;
+                                    }
+                                    &:nth-child(6){
+                                        bottom: 41px;
+                                        right: 25px;
+                                    }
+                                    &:nth-child(7){
+                                        bottom: 0;
+                                        right: 13px;
+                                    }    
+                                }
+                            }
+                        }
+                        .circle-in{
+                            width: 100%;
+                            height: 100%;
+                            border-bottom: 0;
+                            position: absolute;
+                            overflow: hidden;
+                            top: 0;
+                            left: 0;
+                            .circle{
+                                width: 100%;
+                                height: 100%;
+                                border-top-left-radius: 380px;
+                                border-top-right-radius: 380px;
+                                border: 18px solid #1fb5fe;
+                                border-bottom: 0;
+                                position: absolute;
+                                z-index: 1;
+                                transform: rotate(-180deg);
+                                bottom: 0;
+                                transform-origin: bottom;
+                            }
+                        }
+                    }
+                    &.sunrise-set{
+                        .circle-box{
+                            margin-top: 82px;
+                            .circle-out{
+                                width: 100%;
+                                height: 100%;
+                                border: dashed 2px rgba(255, 255, 255, .2);
+                                border-bottom: 0;
+                            }
+                            .circle-in{
+                                .circle{
+                                    border: dashed 2px $yellow;
+                                    border-bottom: 0;
+                                    position: relative;
+                                    &:before{
+                                        content: "";
+                                        position: absolute;
+                                        bottom: -4px;
+                                        right: -10px;
+                                        width: 20px;
+                                        height: 20px;
+                                        // border: solid 1px #f00;
+                                        background: url(/Images/sun-notch-ico.svg) no-repeat center center /18px;
+                                        transform: rotate(20deg);
+                                    }
+                                }
+                            }
+                        }
+                        .sun-details{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            border-top: solid 1px rgba(255, 255, 255, .19);
+                            .sun-box{
+                                width: 269px;
+                                height: auto;
+                                position: relative; 
+                                &:before , &:after{
+                                    content: "";
+                                    position: absolute;
+                                    top: -2px;
+                                    width: 13px;
+                                    height: 4px;
+                                    border-radius: 5px ;
+                                    background: $yellow;
+                                }
+                                &:before{
+                                    left: 9px;
+                                }
+                                &:after{
+                                    right: 9px;
+                                }
+                                .sun-time{
+                                    margin-top: 6px;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                    span{
+                                        display: block;
+                                        @include setFont($poppins,10px,400);
+                                        color: $yellow;
+                                        margin-top: 3px;
+                                    }
+                                    p{
+                                        @include setFont($poppins,14px,400)
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+                &.short{
+                    min-height: auto;
+                    h5{
+                        padding: 0 !important;
+                    }
+
+                }
+                .highlight-value{
+                    p{
+                        @include setFont($oswald,40px,300);
+                        line-height: 43px;
+                        margin-bottom: 0;
+                    }
+                    em{
+                        font-style: normal;
+                        @include setFont($poppins,20px,300);
+                        display: inline-block;
+                        margin-left:6px;
+                    }
+                    span{
+                            @include setFont($oswald,20px,300);
+                            color: white;
+                            // opacity: .5;
+                            display: inline-block;
+                            margin-left: 4px;
+                    }
+                }
+            }
+        }
+    }
+    &.forcast{
+        .forcast-box{
+            background: transparent;
+            backdrop-filter: blur(50px);
+            background-color: rgba(0, 0, 0, .2);
+            border-radius: 14px;
+            width: 100%;
+            .weather-icon{
+                padding: 20px;
+                .weather-img{
+                    height: 100px;
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+            .date-time{
+                text-align: center;
+                p{
+                    @include setFont($poppins,16px,300);
+                    margin-bottom: 0;
+                }
+                span{
+                    @include setFont($poppins,12px,300);
+                    opacity: .8;
+                    text-transform: uppercase;
+                }
+            }
+            .temp{
+                padding: 20px 0px;
+                p{
+                    @include setFont($oswald,30px,300);
+                    margin-bottom: 0;
+                    line-height: 32px;
+                }
+                .min-temp{
+                    p{
+                        @include setFont($poppins,16px,300);
+                        line-height: 18px;
+                        opacity: .8;
+                    }
+                }
+            }
+            .highlights{
+                border-top: solid 1px rgba(255, 255, 255, .2);
+                padding: 20px;
+                .highlights-text{
+                    position: relative;
+                    div{
+                        width: 18px;
+                        position:relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 5px;
+                    }
+                    p{
+                        @include setFont($oswald,19px,300);
+                        em{
+                            font-style: normal;
+                            opacity: .8;
+                            @include setFont($poppins,12px,300);
+                            display:inline-block;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+    &.other-cities{
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .city-box{
+            p{
+                margin-bottom: 0;
+            }
+            .city{
+                @include setFont($poppins,20px,300);
+                margin-bottom: 15px;
+                span{
+                    @include setFont($poppins,16px,300);
+                    opacity: .8;
+                }
+            }
+            .weather-description{
+                @include setFont($poppins,12px,300);
+            }
+            .temp{
+                @include setFont($oswald,45px,300);
+            }
+            .weather-ico{
+                width: 100px;
+                height: 80px;
+                text-align: center;
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
